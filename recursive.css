@@ -1,0 +1,78 @@
+header {
+
+	background-color: #555;
+
+	color: white;
+
+	padding: 15px;
+
+}
+	
+
+	
+footer {
+		
+	background-color: #555;
+		
+	color: white;
+		
+	padding: 15px;
+		
+	box-shadow: 0px 9999px 0px 9999px #555;
+
+}
+
+
+/* Main Body Styles */
+
+
+.panel-body {
+
+	margin: auto;
+
+	width: 80%;
+
+	background-color: #fff;
+
+	border-left: 3px solid #666;
+
+	border-right: 3px solid #666;
+
+	padding: 10px;
+
+}
+	
+
+	
+body {
+
+	background-image: url("GlassesPattern.jpg");
+
+	color: #404040;
+
+	}
+
+
+
+footer a:link {
+
+	color: white;
+
+}
+
+
+footer a:visited {
+
+
+	color: #FED23E;
+
+}
+
+	
+
+footer a:hover {
+
+	color: #f2f2f2;
+
+}
+	
