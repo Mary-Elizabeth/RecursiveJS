@@ -160,14 +160,17 @@ document.body.appendChild(header);
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
+
 var panelBody = document.createElement('div');
 
 panelBody.className = 'panel-body';
 
 
+
 var fluidContainer = document.createElement('div');
 
 fluidContainer.className = 'container-fluid';
+
 
 
 var row = document.createElement('div');
@@ -179,14 +182,31 @@ row.className = 'row';
 
 var fibDiv = document.createElement("div");
 
-fibDiv.className = "text-left"
+fibDiv.className = "col-sm-12 text-center";
+
+fibDiv.innerHTML += '<img src="spiralsBlack.jpg" alt="Fib Image" align="middle" height="200px" width = "200px">';
+
+fibDiv.innerHTML += '<h4> Fibonacci</h4>';
+
 var i;
 
+fibDiv.innerHTML += '<p>';
 for (i = 0; i <= 11; ++i) {
  
    
-   fibDiv.innerHTML += '<p> Fibonacci('+ i + ') = '+ fibonacci(i) +'</p>';
+if (i < 11) {
 
+       fibDiv.innerHTML += fibonacci(i) +'&nbsp;-->&nbsp;';
+ 
+   }
+
+    else
+
+   {
+
+      fibDiv.innerHTML +=  fibonacci(i) +'</p>';
+ 
+   }
 }
 
 
@@ -194,28 +214,53 @@ for (i = 0; i <= 11; ++i) {
 
 var pellDiv = document.createElement("div");
 
-pellDiv.className = "text-center"
+pellDiv.className = "col-sm-12 text-center";
+
+pellDiv.innerHTML += '<h4> Pell</h4>';
+
 var j;
 
 for (j = 0; j <= 11; ++j) {
  
    
-   pellDiv.innerHTML += '<p> Pell('+ j + ') = '+ pell(j) +'</p>';
+   if (j < 11) {
 
+       pellDiv.innerHTML += pell(j) +'&nbsp;-->&nbsp;';
+
+   }
+
+   else
+
+   {
+
+      pellDiv.innerHTML +=  pell(j) +'</p>';
+ 
+   }
 }
 
 
 
 var tribDiv = document.createElement("div");
 
-tribDiv.className = "text-right"
+tribDiv.className = "col-sm-12 text-center"
+;
+tribDiv.innerHTML += '<h4> Tribonacci</h4>';
 var k;
 for (k = 0; k <= 11; ++k) {
- 
-   
-   tribDiv.innerHTML += '<p> Tribonacci('+ k + ') = '+ tribbonacci(k) +'</p>';
+   if (k < 11) {
 
-}
+       tribDiv.innerHTML += tribbonacci(k) +'&nbsp;-->&nbsp;';
+ 
+   }
+
+   else
+
+   {
+
+      tribDiv.innerHTML +=  tribbonacci(k) +'</p>';
+ 
+   }
+ }
 
 
 row.appendChild(fibDiv);
@@ -324,8 +369,6 @@ var fibText = document.createTextNode("Fibonacci");
     paragraph2.appendChild(paraNode);
 
 
-
-    footer.appendChild(header);
 
     footer.appendChild(paragraph1);
 
