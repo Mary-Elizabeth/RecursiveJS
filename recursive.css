@@ -1,18 +1,17 @@
 header {
 
-	background-color: #555;
+	background-color: #557253;
 
 	color: white;
 
 	padding: 15px;
-
 }
 	
 
 	
 footer {
 		
-	background-color: #555;
+	background-color: #557253;
 		
 	color: white;
 		
@@ -34,9 +33,9 @@ footer {
 
 	background-color: #fff;
 
-	border-left: 3px solid #666;
+	border-left: 3px solid #557253;
 
-	border-right: 3px solid #666;
+	border-right: 3px solid #557253;
 
 	padding: 10px;
 
@@ -46,11 +45,12 @@ footer {
 	
 body {
 
-	background-image: url("GlassesPattern.jpg");
+	background-image: url("fibonacci.jpg");
+
+	background-size: cover;
 
 	color: #404040;
-
-	}
+}
 
 
 
@@ -64,7 +64,7 @@ footer a:link {
 footer a:visited {
 
 
-	color: #FED23E;
+	color: #DBEE7F;
 
 }
 
@@ -72,7 +72,7 @@ footer a:visited {
 
 footer a:hover {
 
-	color: #f2f2f2;
+	color: #C8C8C8;
 
 }
 	

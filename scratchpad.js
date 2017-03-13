@@ -1,3 +1,76 @@
+var fibonacci = function(n) {
+
+    if(n == 0) {
+
+        return 0;
+
+    }
+ 
+    else if(n == 1 || n == 2) {
+
+        return 1;
+
+    }
+
+    else {
+
+        return this.fibonacci(n - 1) + this.fibonacci(n - 2);
+
+    }
+
+};
+
+
+
+var pell = function(n) {
+
+ if(n == 0) {
+
+        return 0;
+
+    }
+ 
+    else if(n == 1) {
+
+        return 1;
+
+    }
+
+  else {
+
+   return 2 *(this.pell(n-1) + this.pell(n-2));
+
+ }
+
+};
+
+
+
+var tribbonacci = function(n) {
+
+ if(n == 0) {
+
+        return 0;
+
+    }
+ 
+  else if (n < 3 && n!=0) {
+
+   return 1;
+
+ }
+
+ else {
+
+   return this.tribbonacci(n-1) + this.tribbonacci(n-2) + this.tribbonacci(n-3);
+
+  }
+
+};
+
+
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////
 
 //LOADING BOOTSTRAP LINKS/SCRIPTS////////////////////////////////////////////////////////////
@@ -61,6 +134,103 @@ var scriptJquery = document.createElement('scriptJquery');
 document.title = "Recursive JS";
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+//HEADER////////////////////////////////////////////////////////////////////////////////////
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var header = document.createElement('header');
+
+header.className = 'container-fluid text-center';
+
+var headerH2 = document.createElement('h2');
+
+var nodeH2 = document.createTextNode('JavaScript Recursive Sequences');
+
+headerH2.appendChild(nodeH2);
+
+header.appendChild(headerH2);
+
+document.body.appendChild(header);
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
+
+
+var panelBody = document.createElement('div');
+
+panelBody.className = 'panel-body';
+
+
+var fluidContainer = document.createElement('div');
+
+fluidContainer.className = 'container-fluid';
+
+
+var row = document.createElement('div');
+
+row.className = 'row';
+
+
+
+
+var fibDiv = document.createElement("div");
+
+fibDiv.className = "text-left"
+var i;
+
+for (i = 0; i <= 11; ++i) {
+ 
+   
+   fibDiv.innerHTML += '<p> Fibonacci('+ i + ') = '+ fibonacci(i) +'</p>';
+
+}
+
+
+
+
+var pellDiv = document.createElement("div");
+
+pellDiv.className = "text-center"
+var j;
+
+for (j = 0; j <= 11; ++j) {
+ 
+   
+   pellDiv.innerHTML += '<p> Pell('+ j + ') = '+ pell(j) +'</p>';
+
+}
+
+
+
+var tribDiv = document.createElement("div");
+
+tribDiv.className = "text-right"
+var k;
+for (k = 0; k <= 11; ++k) {
+ 
+   
+   tribDiv.innerHTML += '<p> Tribonacci('+ k + ') = '+ tribbonacci(k) +'</p>';
+
+}
+
+
+row.appendChild(fibDiv);
+
+row.appendChild(pellDiv);
+
+row.appendChild(tribDiv);
+
+fluidContainer.appendChild(row);
+
+panelBody.appendChild(fluidContainer);
+
+document.body.appendChild(panelBody);
+
+
 
 
 
@@ -93,13 +263,6 @@ document.title = "Recursive JS";
     footer.className = 'container-fluid text-center';
 
     
-var header = document.createElement("h4");
-    
-var node = document.createTextNode("Helpful Links");
-
-
-    header.appendChild(node);
-
 var paragraph1 = document.createElement("p");
 
     var linkSpace1 = document.createTextNode(" | ");
@@ -175,18 +338,3 @@ var fibText = document.createTextNode("Fibonacci");
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
-
-
-var fibonacci = function(n) {
-
-    if(n <= 11) {
-
-        return 1;
-
-    } else {
-
-        return this.fibonacci(n - 1) + this.fibonacci(n - 2);
-
-    }
-
-};
